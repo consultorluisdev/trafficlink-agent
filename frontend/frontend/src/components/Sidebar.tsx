@@ -6,41 +6,38 @@ import {
   FileText,
   LayoutDashboard,
   Settings,
-  Sidebar,
-  Sparkles,
-  Target,
   Users,
   Zap,
-} from "lucide-react";
+} from 'lucide-react';
 
 const navigationItems = [
   {
-    label: "Dashboard",
+    label: 'Dashboard',
     icon: LayoutDashboard,
-  }
+  },
   {
-    label: "AI Agent",
+    label: 'AI Agent',
     icon: Bot,
-  }
+  },
   {
-    label: "Content",
+    label: 'Content',
     icon: FileText,
-  }
+  },
   {
-    label: "Audience",
+    label: 'Audience',
     icon: Users,
-  }
+  },
   {
-    label: "Paid Traffic",
+    label: 'Paid Traffic',
     icon: CircleDollarSign,
-  }
+  },
   {
-    label: "Analytics",
+    label: 'Analytics',
     icon: BarChart3,
-  }
+  },
   {
-    label: "Calendar",
-    icon: CalendarDays
+    label: 'Calendar',
+    icon: CalendarDays,
   },
 ];
 export function Sidebar() {
@@ -48,18 +45,14 @@ export function Sidebar() {
     <aside className="fixed left-0 top-0 flex h-screen w-64 flex-col border-r border-zinc-800 bg-zinc-950 px-4 py-5 text-white">
       {/* Brand*/}
       <div className="flex items-center gap-3 px-3">
-        <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 shadow-lg shadow-violet-500/20">
+        <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-linear-to-br from-violet-500 to-indigo-600 shadow-lg shadow-violet-500/20">
           <Zap size={18} fill="currentColor" />
         </div>
 
         <div>
-          <h1 className="text-sm font-bold tracking-wide">
-            TRÁFICLINK
-          </h1>
+          <h1 className="text-sm font-bold tracking-wide">TRÁFICLINK</h1>
 
-          <p className="text-[9px] uppercase tracking-[0.18em] text-zinc-500">
-            AI Markenting
-          </p>
+          <p className="text-[9px] uppercase tracking-[0.18em] text-zinc-500">AI Markenting</p>
         </div>
       </div>
 
@@ -76,10 +69,11 @@ export function Sidebar() {
             return (
               <button
                 key={item.label}
-                className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition ${active
-                  ? "bg-violet-600/15 text-white shadow-[insert_2px_0_0#8b5cf6]"
-                  : "text-zinc-500 hover:bg-zinc-900 hover:text-zinc-200"
-                  }`}
+                className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition ${
+                  active
+                    ? 'bg-violet-600/15 text-white shadow-[inset_2px_0_0_#8b5cf6]'
+                    : 'text-zinc-500 hover:bg-zinc-900 hover:text-zinc-200'
+                }`}
               >
                 <Icon size={17} />
 
@@ -95,14 +89,10 @@ export function Sidebar() {
         <div className="flex items-center gap-2">
           <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]" />
 
-          <span className="text-xs font-medium text-zinc-200">
-            Agent online
-          </span>
+          <span className="text-xs font-medium text-zinc-200">Agent online</span>
         </div>
 
-        <p className="mt-1 pl-4 text-[10px] text-zinc-600">
-          Rust / Axum
-        </p>
+        <p className="mt-1 pl-4 text-[10px] text-zinc-600">Rust / Axum</p>
       </div>
 
       {/* Settings */}
@@ -118,12 +108,8 @@ export function Sidebar() {
         </div>
 
         <div>
-          <p className="text-xs font-medium text-zinc-300">
-            Workspace
-          </p>
-          <p className="text-[10px] text-zinc-600">
-            Local envoriment
-          </p>
+          <p className="text-xs font-medium text-zinc-300">Workspace</p>
+          <p className="text-[10px] text-zinc-600">Local envoriment</p>
         </div>
       </div>
     </aside>
